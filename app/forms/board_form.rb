@@ -11,7 +11,9 @@ class BoardForm
   validates :mines,  presence: true, length: { in: 0..2500 }
 
   def save
-    matrix = ::Matrix::Generator.new(width:, height:, mines:).call
+    matrix = ::BoardMatrix::Generator
+             .new(width: width.to_i, height: height.to_i, mines: mines.to_i)
+             .call
     Board.new(name:, email:, matrix:).save
   end
 end
