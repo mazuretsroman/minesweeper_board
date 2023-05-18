@@ -6,7 +6,7 @@ class BoardsController < ApplicationController
   end
 
   def all
-    @boards = Board.all
+    @boards = Board.paginate(page: params[:page])
   end
 
   def show

@@ -1,2 +1,4 @@
-<h1>boards#all</h1>
+<h1 class="text-center mt-3">All boards</h1>
 <p>Count: <%= @boards.count %></p>
+<%= render @boards %>
+<%= will_paginate @boards, renderer: BootstrapPagination::Rails %>
