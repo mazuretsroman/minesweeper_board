@@ -1,1 +1,24 @@
 @import "bootstrap";
+
+@import url('https://fonts.googleapis.com/css2?family=Libre+Baskerville&display=swap');
+
+$link-base-blue: #417189;
+
+body {
+  font-family: 'Libre Baskerville', serif;
+}
+
+a {
+  color: $link-base-blue;
+}
+
+.btn-create {
+  color: #fff;
+  background-color: $link-base-blue;
+  border-color: $link-base-blue;
+
+  &:hover {
+    background-color: #4889a9;
+    color: #fff;
+  }
+}

@@ -1,5 +1,5 @@
-<h1 class="text-center">Minesweeper Board Generator</h1>
-<div class="row">
+<h1 class="text-center mt-3">Minesweeper Board Generator</h1>
+<div class="row mt-3">
   <div class="col-6">
     <%= form_with model: Board.new do |f| %>
       <h2>Create new</h2>
@@ -7,23 +7,23 @@
         <%= f.label :name %>
         <%= f.text_field :name, class: "form-control" %>
       </div>
-      <div class="from-group">
+      <div class="from-group mt-2">
         <%= f.label :email %>
         <%= f.email_field :email, class: "form-control" %>
       </div>
-      <div class="from-group">
+      <div class="from-group mt-2">
         <%= f.label :width %>
         <%= f.number_field :width, in: BoardForm::SIZE_RANGE, step: 1, class: "form-control" %>
       </div>
-      <div class="from-group">
+      <div class="from-group mt-2">
         <%= f.label :height %>
         <%= f.number_field :height, in: BoardForm::SIZE_RANGE, step: 1, class: "form-control" %>
       </div>
-      <div class="from-group">
+      <div class="from-group mt-2">
         <%= f.label :mines %>
         <%= f.number_field :mines, in: BoardForm::MINES_RANGE, step: 1, class: "form-control" %>
       </div>
-      <%= f.submit 'Create', class: 'btn btn-primary' %>
+      <%= f.submit 'Create', class: 'btn btn-create mt-2' %>
     <% end %>
   </div>
   <div class="col-6">

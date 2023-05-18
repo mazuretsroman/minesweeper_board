@@ -1,4 +1,9 @@
-<div>
-  <span><%= link_to board.name, board_path(board) %></span>
-  <span><%= board.email %></span>
+<div class="board-thumb row">
+  <div class="col-6">
+    <span class="fw-bold"><%= link_to board.name, board_path(board) %></span>
+  </div>
+  <div class="col-6">
+    <span class="fw-bolder">author: </span>
+    <span><%= board.email %></span>
+  </div>
 </div>
