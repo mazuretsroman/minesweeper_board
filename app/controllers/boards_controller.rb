@@ -2,8 +2,7 @@
 
 class BoardsController < ApplicationController
   def index
-    @new_board = BoardForm.new
-    @last_ten_boards = Board.order(:created_at).limit(10)
+    @last_ten_boards = Board.order(created_at: :desc).limit(10)
   end
 
   def all

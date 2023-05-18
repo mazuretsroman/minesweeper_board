@@ -1,2 +1,36 @@
-<h1>boards#index</h1>
+<h1 class="text-center">Minesweeper Board Generator</h1>
+<div class="row">
+  <div class="col-6">
+    <%= form_with model: Board.new do |f| %>
+      <h2>Create new</h2>
+      <div class="from-group">
+        <%= f.label :name %>
+        <%= f.text_field :name, class: "form-control" %>
+      </div>
+      <div class="from-group">
+        <%= f.label :email %>
+        <%= f.email_field :email, class: "form-control" %>
+      </div>
+      <div class="from-group">
+        <%= f.label :width %>
+        <%= f.number_field :width, in: BoardForm::SIZE_RANGE, step: 1, class: "form-control" %>
+      </div>
+      <div class="from-group">
+        <%= f.label :height %>
+        <%= f.number_field :height, in: BoardForm::SIZE_RANGE, step: 1, class: "form-control" %>
+      </div>
+      <div class="from-group">
+        <%= f.label :mines %>
+        <%= f.number_field :mines, in: BoardForm::MINES_RANGE, step: 1, class: "form-control" %>
+      </div>
+      <%= f.submit 'Create', class: 'btn btn-primary' %>
+    <% end %>
+  </div>
+  <div class="col-6">
+    <h2>Last 10</h2>
+    <%= render @last_ten_boards %>
+    <br>
+    <div><%= link_to 'See all...', all_boards_path %></div>
+  </div>
+</div>
 
