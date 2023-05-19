@@ -1,4 +1,5 @@
 <h1 class="text-center mt-3">All boards</h1>
+<p><%= link_to "Back to root", root_path %></p>
 <p>Count: <%= @boards.count %></p>
 <%= render @boards %>
 <%= will_paginate @boards, renderer: BootstrapPagination::Rails %>

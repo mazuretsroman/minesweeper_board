@@ -1,6 +1,6 @@
-@import "bootstrap";
-
+@import 'bootstrap';
 @import url('https://fonts.googleapis.com/css2?family=Libre+Baskerville&display=swap');
+@import 'font-awesome';
 
 $link-base-blue: #417189;
 
@@ -21,4 +21,16 @@ a {
     background-color: #4889a9;
     color: #fff;
   }
+}
+
+.matrix {
+  border: 1px solid black;
+}
+
+.matrix-cell {
+  margin: 2px;
+  padding-left: 3px;
+  width: 35px;
+  height: 35px;
+  border: 1px solid gray;
 }

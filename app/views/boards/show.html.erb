@@ -1,2 +1,14 @@
-<h1>boards#show</h1>
-<p>Name: <%= @board.name %></p>
+<h1 class="text-center"><%= @board.name %></h1>
+<p><%= link_to "Back to root", root_path %></p>
+<p>Author: <%= @board.email %></p>
+<div class="matrix d-inline-block">
+  <%- @board.matrix.each do |row| %>
+    <div>
+      <%- row.each do |cell| %>
+        <div class="matrix-cell d-inline-block">
+          <%= cell ? fa_icon("bomb") : "&nbsp".html_safe %>
+        </div>
+      <% end %>
+    </div>
+  <% end %>
+</div>

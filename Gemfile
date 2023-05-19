@@ -47,6 +47,7 @@ gem 'bootstrap', '~> 5.1.3'
 gem "sassc-rails"
 
 gem 'will_paginate-bootstrap'
+gem 'font-awesome-rails'
 
 # Use Active Storage variants [https://guides.rubyonrails.org/active_storage_overview.html#transforming-images]
 # gem "image_processing", "~> 1.2"
